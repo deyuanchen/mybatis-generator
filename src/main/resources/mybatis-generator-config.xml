@@ -7,27 +7,26 @@
         <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
         <plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin" />
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
-
-        <commentGenerator>
-            <property name="suppressDate" value="true" />
-            <property name="suppressAllComments" value="true" />
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"></plugin>
+        <commentGenerator type="util.MyCommentGenerator">
         </commentGenerator>
+
 
         <!-- jdbc连接 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://locahost:3306/boot" userId="root"
-                        password="chendeyuan" />
+                        connectionURL="jdbc:mysql://118.31.56.60:3306/woods" userId="root"
+                        password="123456" />
 
         <javaModelGenerator targetPackage="com.mybatis.entity"
-                            targetProject="src/main/java">
+                            targetProject="mybatis-generator/src/main/java">
             <!-- 是否针对string类型的字段在set的时候进行trim调用 -->
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
-        <sqlMapGenerator targetPackage="mappers" targetProject="src/main/java" />
+        <sqlMapGenerator targetPackage="mappers" targetProject="mybatis-generator/src/main/java" />
         <javaClientGenerator targetPackage="com.mybatis.mapper"
-                             targetProject="src/main/java" type="XMLMAPPER" />
+                             targetProject="mybatis-generator/src/main/java" type="XMLMAPPER" />
 
-        <table tableName="pay_deposit" domainObjectName="pay_deposit">
+        <table tableName="goods" domainObjectName="goods">
 
         </table>
 

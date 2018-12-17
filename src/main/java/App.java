@@ -1,7 +1,7 @@
 import org.mybatis.generator.api.ShellRunner;
 
 /**
- * <p>Tiltle: mybatismybatisgenerator </p>
+ * <p>Tiltle: mybatis.generator </p>
  * <p>Description: TODO(这里来描述信息) </p>
  *
  * @Author 陈德元
@@ -10,7 +10,7 @@ import org.mybatis.generator.api.ShellRunner;
  */
 public class App {
     public static void main(String[] args) {
-        args = new String[] { "-configfile", "src\\main\\resources\\mybatis-generator-config.xml", "-overwrite" };
+        args = new String[] { "-configfile", "mybatis-generator\\src\\main\\resources\\mybatis-generator-config.xml", "-overwrite" };
         ShellRunner.main(args);
     }
 }
